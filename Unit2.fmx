@@ -1,0 +1,64 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Change scales'
+  ClientHeight = 280
+  ClientWidth = 380
+  Position = poScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [dkDesktop, dkiPhone, dkiPad]
+  DesignerMobile = False
+  DesignerWidth = 0
+  DesignerHeight = 0
+  DesignerDeviceName = ''
+  DesignerOrientation = 0
+  object TreeView1: TTreeView
+    Height = 313.000000000000000000
+    TabOrder = 0
+    Width = 145.000000000000000000
+    OnChange = TreeView1Change
+  end
+  object GroupBox1: TGroupBox
+    StyledSettings = [ssFamily, ssSize, ssStyle, ssFontColor, ssOther]
+    Height = 193.000000000000000000
+    Position.X = 160.000000000000000000
+    Position.Y = 16.000000000000000000
+    Text = 'Device details'
+    Width = 201.000000000000000000
+    TabOrder = 1
+    object Label1: TLabel
+      Height = 17.000000000000000000
+      Position.X = 16.000000000000000000
+      Position.Y = 40.000000000000000000
+      Text = 'Name'
+      Width = 49.000000000000000000
+    end
+    object Edit1: TEdit
+      TabOrder = 1
+      Position.X = 72.000000000000000000
+      Position.Y = 40.000000000000000000
+      Width = 100.000000000000000000
+      Height = 22.000000000000000000
+      KillFocusByReturn = False
+    end
+  end
+  object Button1: TButton
+    Height = 22.000000000000000000
+    ModalResult = 1
+    Position.X = 176.000000000000000000
+    Position.Y = 232.000000000000000000
+    TabOrder = 2
+    Text = 'Change'
+    Width = 80.000000000000000000
+  end
+  object Button2: TButton
+    Height = 22.000000000000000000
+    ModalResult = 2
+    Position.X = 280.000000000000000000
+    Position.Y = 232.000000000000000000
+    TabOrder = 3
+    Text = 'Cancel'
+    Width = 80.000000000000000000
+  end
+end

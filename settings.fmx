@@ -1,0 +1,78 @@
+object SettingsWn: TSettingsWn
+  Left = 0
+  Top = 0
+  Caption = 'Your settings'
+  ClientHeight = 380
+  ClientWidth = 204
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [dkDesktop, dkiPhone, dkiPad]
+  DesignerMobile = False
+  DesignerWidth = 0
+  DesignerHeight = 0
+  DesignerDeviceName = ''
+  DesignerOrientation = 0
+  object ToolBar1: TToolBar
+    Height = 40.000000000000000000
+    TabOrder = 0
+    Width = 204.000000000000000000
+    object SaveBut: TButton
+      Align = alLeft
+      Height = 40.000000000000000000
+      TabOrder = 0
+      Text = 'Save'
+      Width = 73.000000000000000000
+      OnClick = SaveButClick
+    end
+    object Button1: TButton
+      Height = 40.000000000000000000
+      Position.X = 80.000000000000000000
+      Position.Y = 1.000000000000000000
+      TabOrder = 1
+      Text = 'Apply'
+      Visible = False
+      Width = 73.000000000000000000
+      OnClick = Button1Click
+    end
+  end
+  object TabControl1: TTabControl
+    Align = alClient
+    Height = 340.000000000000000000
+    TabIndex = 1
+    TabOrder = 1
+    Width = 204.000000000000000000
+    object TabItem1: TTabItem
+      WordWrap = False
+      Height = 23.000000000000000000
+      IsSelected = False
+      Position.X = 1.000000000000000000
+      TabOrder = 0
+      Text = 'Parameters'
+      Width = 74.000000000000000000
+      object ParamList: TMemo
+        Align = alClient
+        Height = 317.000000000000000000
+        TabOrder = 0
+        Width = 204.000000000000000000
+      end
+    end
+    object TabItem2: TTabItem
+      WordWrap = False
+      Height = 23.000000000000000000
+      IsSelected = True
+      Position.X = 75.000000000000000000
+      TabOrder = 1
+      Text = 'Keywords'
+      Width = 67.000000000000000000
+      object TabList: TMemo
+        Align = alClient
+        Height = 317.000000000000000000
+        TabOrder = 0
+        Width = 204.000000000000000000
+        Lines.Strings = (
+          'Miscellaneous')
+        OnKeyDown = TabListKeyDown
+      end
+    end
+  end
+end

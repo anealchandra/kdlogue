@@ -1,0 +1,84 @@
+object Scan: TScan
+  Left = 0
+  Top = 0
+  Caption = 'Camera waiting for barcode...'
+  ClientHeight = 373
+  ClientWidth = 311
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [dkDesktop, dkiPhone, dkiPad]
+  OnClose = FormClose
+  DesignerMobile = False
+  DesignerWidth = 0
+  DesignerHeight = 0
+  DesignerDeviceName = ''
+  DesignerOrientation = 0
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 176
+    Top = 176
+  end
+  object MediaPlayer1: TMediaPlayer
+    Left = 240
+    Top = 176
+  end
+  object Layout1: TLayout
+    Align = alClient
+    Height = 373.000000000000000000
+    Width = 311.000000000000000000
+    object Edit1: TEdit
+      TabOrder = 0
+      Text = '1'
+      Position.X = 40.000000000000000000
+      Position.Y = 264.000000000000000000
+      Width = 265.000000000000000000
+      Height = 22.000000000000000000
+      KillFocusByReturn = False
+    end
+    object Label1: TLabel
+      Height = 25.000000000000000000
+      Position.X = 8.000000000000000000
+      Position.Y = 262.000000000000000000
+      Text = 'Text'
+      Width = 57.000000000000000000
+    end
+    object Label2: TLabel
+      Height = 25.000000000000000000
+      Position.X = 8.000000000000000000
+      Position.Y = 288.000000000000000000
+      Text = 'Data'
+      Width = 57.000000000000000000
+    end
+    object Label3: TLabel
+      Height = 15.000000000000000000
+      Position.X = 8.000000000000000000
+      Position.Y = 329.000000000000000000
+      Text = 'Error'
+      Width = 57.000000000000000000
+    end
+    object Memo: TMemo
+      Height = 33.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 288.000000000000000000
+      TabOrder = 4
+      Width = 265.000000000000000000
+    end
+    object Memo1: TMemo
+      Height = 41.000000000000000000
+      Position.X = 40.000000000000000000
+      Position.Y = 324.000000000000000000
+      TabOrder = 5
+      Width = 265.000000000000000000
+    end
+    object ScrollBox1: TScrollBox
+      Height = 257.000000000000000000
+      TabOrder = 6
+      Width = 311.000000000000000000
+    end
+  end
+  object FObr1: TFObr
+    OnBarcodeDetected = FObr1BarcodeDetected
+    Left = 120
+    Top = 176
+  end
+end
